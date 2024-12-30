@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Funções CodeHelp</title>
@@ -8,27 +9,62 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+
         .function {
             margin-bottom: 20px;
         }
+
         .function-name {
             font-weight: bold;
         }
+
         .function-content {
             white-space: pre-wrap;
             background-color: #f4f4f4;
             padding: 10px;
             border: 1px solid #ddd;
         }
+
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            text-align: center;
+        }
+
+        .icon-name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer img {
+            width: 30px;
+            /* Ajuste o tamanho conforme necessário */
+            height: 30px;
+            margin-bottom: 5px;
+            /* Espaço entre o ícone e o nome */
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
     <h1>Funções CodeHelp</h1>
     <div id="functions-container"></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const jsonUrl = 'https://raw.githubusercontent.com/Miguelito001/funcoes/main/funcoe.json'; // Substitua pelo URL do seu arquivo JSON
+        document.addEventListener('DOMContentLoaded', function () {
+            const jsonUrl = 'https://raw.githubusercontent.com/Miguelito001/funcoes/main/funcoe.json';
 
             fetch(jsonUrl)
                 .then(response => {
@@ -61,5 +97,15 @@
                 });
         });
     </script>
+
+    <div class="footer">
+        <a href="https://github.com/Miguelito001/CodeHelp" target="_blank">
+            <div class="icon-name-container">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub Logo">
+                <span>Miguel Rosso</span>
+            </div>
+        </a>
+    </div>
 </body>
+
 </html>
